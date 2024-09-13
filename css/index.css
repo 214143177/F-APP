@@ -1,0 +1,100 @@
+@import url("./reset.css");
+@import url("./nav.css");
+@import url("./main.css");
+* {
+    box-sizing: border-box;
+}
+:root {
+    --main-bg-color: #f3f3f3;
+    --head-bg-color: #1e90ff;
+    --input-bg-color: #ffffff;
+    --main-text-color: 000000;
+    --secondary-text-color: #bebebe;
+    --component-color: #1e90ff;
+    --accent-color: #ff6348;
+}
+.darkmode {
+    --main-bg-color: #212121;
+    --head-bg-color: #181818;
+    --input-bg-color: #f3f3f3;
+    --main-text-color: #a4a4a4;
+    --secondary-text-color: #bebebe;
+    --component-color: #1e90ff;
+    --accent-color: #ff6348;
+}
+.darkmode #header #header-right #theme-switch #icon-day {
+    display: none;
+}
+.darkmode #header #header-right #theme-switch #icon-night {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+html {
+    font-family: poppins, sans-serif;
+    font-size: 12.5px;
+}
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+        "nav main";
+    text-decoration: none;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+body::after {
+    content: "";
+    background-image: url("/svg/等待状态.svg");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -99;
+    opacity: 0.5;
+}
+nav {
+    grid-area: nav;
+    min-width: 100px;
+    overflow: hidden;
+    background-color: var(--head-bg-color);
+    /* box-shadow: 5px 0 5px rgba(0, 0, 0, 0.3); */
+    height: 100%;
+}
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 32px 1fr;
+    grid-template-areas:
+        "header header "
+        "forms  output ";
+    gap: 10px;
+    height: 100%;
+}
+h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+p {
+    line-height: 1.5;
+}
+a:hover, a:active, a:visited {
+    color: var(--main-text-color);
+}

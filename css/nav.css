@@ -1,0 +1,48 @@
+nav #nav-top {
+    height: 40px;
+    width: 100%;
+    padding-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav #nav-top img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+nav #nav-top span {
+    margin-left: 5px;
+    font-size: 24px;
+    font-weight: bold;
+}
+nav #nav-center {
+    padding: 10px 0;
+}
+nav #nav-center ul {
+    line-height: 2rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+nav #nav-center ul div {
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+    cursor: pointer;
+}
+nav #nav-center ul div img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+nav #nav-center ul li {
+    text-indent: 55px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+nav #nav-center ul li:hover {
+    color: var(--accent-color);
+}

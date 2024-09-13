@@ -1,0 +1,175 @@
+main #header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.075) 0 1px;
+}
+main #header #header-left {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+}
+main #header #header-left span {
+    display: inline-block;
+    padding-left: 100%;
+    will-change: transform;
+    animation: run 10s linear infinite;
+}
+@keyframes run {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+main #header #header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+main #header #header-right > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+main #header #header-right img {
+    height: 16px;
+    width: 16px;
+    margin: 0 3px;
+}
+main #header #header-right #theme-switch {
+    width: 36px;
+    height: 36px;
+    background-color: var(--main-base-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+main #header #header-right #theme-switch img {
+    height: 24px;
+    width: 24px;
+}
+main #header #header-right #theme-switch #icon-night {
+    display: none;
+}
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+main #forms {
+    grid-area: forms;
+    padding: 20px;
+}
+main #forms input:not([type="checkbox"], [type="radio"]),
+main #forms select,
+main #forms button,
+main #forms table {
+    width: 70%;
+    min-width: 150px;
+    height: 28px;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--input-bg-color);
+}
+main #forms label {
+    padding: 0 5px;
+}
+main #forms select {
+    appearance: none;
+    background-image: url('../svg/下箭头-方_down-square.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+}
+main #forms input:focus,
+main #forms select:focus,
+main #forms button:focus {
+    border-color: var(--component-color);
+    outline: none;
+}
+main #forms input[type="checkbox"],
+main #forms input[type="radio"] {
+    margin: 0;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid #000;
+}
+main #forms input[type="checkbox"]:checked,
+main #forms input[type="radio"]:checked {
+    background-color: var(--component-color);
+}
+main #forms button {
+    background-color: var(--component-color);
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+main #forms button:hover {
+    background-color: #2d98da;
+}
+main #forms button:active {
+    background-color: #1b82a7;
+}
+main #forms .form {
+    column-count: 2;
+    padding: 20px;
+    margin-top: 20px;
+}
+main #forms .form .form-group {
+    break-inside: avoid;
+}
+main #forms .form h1 {
+    column-span: all;
+}
+main #forms .picture {
+    width: 100%;
+}
+main #forms .picture img {
+    width: 80%;
+    /* 图片居中 */
+    display: block;
+    margin: 0 auto;
+    /* 图片适应容器 */
+    object-fit: contain;
+    object-position: center;
+
+}
+main table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+    color: #000;
+}
+main thead {
+    background-color: var(--component-color);
+    height: 30px;
+}
+main th {
+    padding: 5px;
+    text-align: center;
+    color: var(--main-text-color);
+    font-weight: bold;
+}
+main tbody {
+    background-color: var(--input-bg-color);
+}
+main tr {
+    transition: background-color 0.3s;
+}
+main td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #000;
+}
+main tbody tr:hover {
+    background-color: var(--accent-color);
+}
+main #output {
+    grid-area: output;
+    padding: 20px;
+}
