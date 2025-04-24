@@ -1,0 +1,96 @@
+input, select, option {
+    width: 50%;
+    min-width: 150px;
+    height:  28px;
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--input-bg-color);
+}
+input:focus, select:focus, option:focus {
+    border-color: var(--component-color);
+    outline: none;
+}
+input[type="checkbox"], input[type="radio"] {
+    width: 1rem;
+    height: 1rem;
+    margin-left: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+    background-color: var(--component-color);
+}
+button {
+    width: 50%;
+    background-color: var(--component-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+button:hover {
+    background-color: #2d98da;
+}
+button:active {
+    background-color: #1b82a7;
+}
+label {
+    display: block;
+}
+label span {
+    display: inline-block;
+    margin-left: 5px;
+}
+fieldset {
+    border: none;
+    margin: 5px 0;
+    padding: 0;
+}
+legend {
+    text-indent: 0.3rem;
+}
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 5px;
+    color: #000;
+}
+thead {
+    background-color: var(--component-color);
+    height: 30px;
+}
+th {
+    padding: 5px;
+    text-align: center;
+    color: var(--main-text-color);
+    font-weight: bold;
+}
+tbody{
+    background-color: var(--input-bg-color);
+}
+tr {
+    transition: background-color 0.3s;
+}
+td {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #000;
+}
+tbody tr:hover {
+    background-color: var(--accent-color);
+}
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+h1{
+    column-span: all;
+}

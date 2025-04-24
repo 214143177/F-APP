@@ -1,0 +1,280 @@
+<form id="myForm" name="myForm" class="myForm">
+    <label><span>结构重要性系数</span></label>
+    <select name="γ0" id="γ0">
+        <option class="option" value="">请选择:</option>
+        <option class="option" value="0.9">普通0.9</option>
+        <option class="option" value="1.0">一般1.0</option>
+        <option class="option" value="1.1">重要1.1</option>
+    </select>
+
+    <label><span>弯矩设计值(KN·m)</span></label>
+    <input type="number" id="M" name="M" placeholder="1000">
+
+    <label><span>矩形宽度(mm)</span></label>
+    <input type="number" id="B" name="B" placeholder="1000">
+
+    <label><span>矩形高度(mm)</span></label>
+    <input type="number" id="H" name="H" placeholder="800">
+
+    <label><span>混凝土轴心抗压强度标准值(N/mm²)</span></label>
+    <select name="fck" id="fck">
+        <option value="">请选择:</option>
+        <option value="10">C15</option>
+        <option value="13.4">C20</option>
+        <option value="16.7">C25</option>
+        <option value="20.1">C30</option>
+        <option value="23.4">C35</option>
+        <option value="26.8">C40</option>
+        <option value="29.6">C45</option>
+        <option value="32.4">C50</option>
+        <option value="35.5">C55</option>
+        <option value="38.5">C60</option>
+        <option value="41.5">C65</option>
+        <option value="44.5">C70</option>
+        <option value="47.4">C75</option>
+        <option value="50.2">C80</option>
+    </select>
+
+    <label><span>混凝土轴心抗拉强度标准值(N/mm²)</span></label>
+    <select name="ftk" id="ftk">
+        <option value="">请选择:</option>
+        <option value="1.27">C15</option>
+        <option value="1.54">C20</option>
+        <option value="1.78">C25</option>
+        <option value="2.01">C30</option>
+        <option value="2.20">C35</option>
+        <option value="2.39">C40</option>
+        <option value="2.51">C45</option>
+        <option value="2.64">C50</option>
+        <option value="2.74">C55</option>
+        <option value="2.85">C60</option>
+        <option value="2.93">C65</option>
+        <option value="2.99">C70</option>
+        <option value="3.05">C75</option>
+        <option value="3.11">C80</option>
+    </select>
+
+    <label><span>混凝土轴心抗压强度设计值(N/mm²)</span></label>
+    <select name="fc" id="fc">
+        <option value="">请选择:</option>
+        <option value="7.2">C15</option>
+        <option value="9.6">C20</option>
+        <option value="11.9">C25</option>
+        <option value="14.3">C30</option>
+        <option value="16.7">C35</option>
+        <option value="19.1">C40</option>
+        <option value="21.1">C45</option>
+        <option value="23.1">C50</option>
+        <option value="25.3">C55</option>
+        <option value="27.5">C60</option>
+        <option value="29.7">C65</option>
+        <option value="31.8">C70</option>
+        <option value="33.8">C75</option>
+        <option value="35.9">C80</option>
+    </select>
+
+    <label><span>混凝土轴心抗拉强度设计值(N/mm²)</span></label>
+    <select name="ft" id="ft">
+        <option value="">请选择:</option>
+        <option value="0.91">C15</option>
+        <option value="1.10">C20</option>
+        <option value="1.27">C25</option>
+        <option value="1.43">C30</option>
+        <option value="1.57">C35</option>
+        <option value="1.71">C40</option>
+        <option value="1.80">C45</option>
+        <option value="1.89">C50</option>
+        <option value="1.96">C55</option>
+        <option value="2.04">C60</option>
+        <option value="2.09">C65</option>
+        <option value="2.14">C70</option>
+        <option value="2.18">C75</option>
+        <option value="2.22">C80</option>
+    </select>
+
+    <label><span>混凝土弹性模量(N/mm²)</span></label>
+    <select name="Ec" id="Ec">
+        <option value="">请选择:</option>
+        <option value="22000">C15</option>
+        <option value="25500">C20</option>
+        <option value="28000">C25</option>
+        <option value="30000">C30</option>
+        <option value="31500">C35</option>
+        <option value="32500">C40</option>
+        <option value="33500">C45</option>
+        <option value="34500">C50</option>
+        <option value="35500">C55</option>
+        <option value="36000">C60</option>
+        <option value="36500">C65</option>
+        <option value="37000">C70</option>
+        <option value="37500">C75</option>
+        <option value="38000">C80</option>
+    </select>
+
+    <label><span>钢筋弹性模量(N/mm²)</span></label>
+    <select name="Es" id="Es">
+        <option value="">请选择:</option>
+        <option value="210000">HPB300</option>
+        <option value="200000">HRB335</option>
+        <option value="200000">HRB400</option>
+        <option value="200000">HRBF400</option>
+        <option value="200000">RRB400</option>
+        <option value="200000">HRB500</option>
+        <option value="200000">HRBF500</option>
+        <option value="205000">消除应力钢丝</option>
+        <option value="205000">中强度预应力钢丝</option>
+        <option value="195000">钢绞线</option>
+    </select>
+
+    <label><span>钢筋抗拉强度设计值(N/mm²)</span></label>
+    <select name="fy" id="fy">
+        <option value="">请选择:</option>
+        <option value="270">HPB300</option>
+        <option value="300">HRB335</option>
+        <option value="360">HRB400</option>
+        <option value="360">HRBF400</option>
+        <option value="360">RRB400</option>
+        <option value="435">HRB500</option>
+        <option value="435">HRBF500</option>
+    </select>
+
+    <label><span>钢筋抗压强度设计值(N/mm²)</span></label>
+    <select name="fyi" id="fyi">
+        <option value="">请选择:</option>
+        <option value="270">HPB300</option>
+        <option value="300">HRB335</option>
+        <option value="360">HRB400</option>
+        <option value="360">HRBF400</option>
+        <option value="360">RRB400</option>
+        <option value="435">HRB500</option>
+        <option value="435">HRBF500</option>
+    </select>
+
+    <label><span>工字钢型号</span></label>
+    <select name="gzg" id="gzg">
+        <option value="">请选择:</option>
+        <option value="200">20a</option>
+        <option value="200">20b</option>
+        <option value="220">22a</option>
+        <option value="220">22b</option>
+        <option value="250">25a</option>
+        <option value="250">25b</option>
+        <option value="280">28a</option>
+        <option value="280">28b</option>
+        <option value="320">32a</option>
+        <option value="320">32b</option>
+        <option value="320">32c</option>
+        <option value="360">36a</option>
+        <option value="360">36b</option>
+        <option value="360">36c</option>
+        <option value="400">40a</option>
+        <option value="400">40b</option>
+        <option value="400">40c</option>
+        <option value="450">45a</option>
+        <option value="450">45b</option>
+        <option value="450">45c</option>
+        <option value="500">50a</option>
+        <option value="500">50b</option>
+        <option value="500">50c</option>
+    </select>
+
+    <label>混凝土标号</label>
+    <select name="concrete" id="concrete">
+        <option>请选择:</option>
+        <option>C20</option>
+        <option>C25</option>
+        <option>C30</option>
+        <option>C35</option>
+        <option>C40</option>
+        <option>C45</option>
+        <option>C50</option>
+        <option>C55</option>
+        <option>C60</option>
+        <option>C65</option>
+        <option>C70</option>
+        <option>C75</option>
+        <option>C80</option>
+    </select>
+
+    <label>钢筋型号种类</label>
+    <select name="rebar" id="rebar">
+        <option>请选择:</option>
+        <option>HPB300</option>
+        <option>HRB335</option>
+        <option>HRB400</option>
+        <option>HRBF400</option>
+        <option>RRB400</option>
+        <option>HRB500</option>
+        <option>HRBF500</option>
+        <option>中强度预应力钢丝-800</option>
+        <option>中强度预应力钢丝-1000</option>
+        <option>中强度预应力钢丝-1200</option>
+        <option>预应力螺纹钢筋-980</option>
+        <option>预应力螺纹钢筋-1080</option>
+        <option>预应力螺纹钢筋-1230</option>
+        <option>消除应力钢丝-1470</option>
+        <option>消除应力钢丝-1570</option>
+        <option>消除应力钢丝-1860</option>
+        <option>钢绞线-三股1570</option>
+        <option>钢绞线-三股1860</option>
+        <option>钢绞线-三股1960</option>
+        <option>钢绞线-七股1720</option>
+        <option>钢绞线-七股1860</option>
+        <option>钢绞线-七股1960</option>
+    </select>
+
+    <p>α、β、γ、δ、ε、ζ、η、θ、ι、κ、λ、μ、ν、ξ、π、ρ、σ、τ、υ、φ、χ、ψ、ω</p>
+
+    <script>
+        // 混凝土相关参数
+        const concrete = document.getElementById('concrete');
+        const index_concrete = concrete.selectedIndex - 1;
+        var specs_concrete = [
+            { grade: "C20", β1: 0.80, α1: 1.0, fck: 13.4, ftk: 1.54, fc: 9.6, ft: 1.10, Ec: 25500 },
+            { grade: "C25", β1: 0.80, α1: 1.0, fck: 16.7, ftk: 1.78, fc: 11.9, ft: 1.27, Ec: 28000 },
+            { grade: "C30", β1: 0.80, α1: 1.0, fck: 20.1, ftk: 2.01, fc: 14.3, ft: 1.43, Ec: 30000 },
+            { grade: "C35", β1: 0.80, α1: 1.0, fck: 23.4, ftk: 2.20, fc: 16.7, ft: 1.57, Ec: 31500 },
+            { grade: "C40", β1: 0.80, α1: 1.0, fck: 26.8, ftk: 2.39, fc: 19.1, ft: 1.71, Ec: 32500 },
+            { grade: "C45", β1: 0.80, α1: 1.0, fck: 29.6, ftk: 2.51, fc: 21.1, ft: 1.80, Ec: 33500 },
+            { grade: "C50", β1: 0.80, α1: 1.0, fck: 32.4, ftk: 2.64, fc: 23.1, ft: 1.89, Ec: 34500 },
+            { grade: "C55", β1: 0.79, α1: 0.99, fck: 35.5, ftk: 2.74, fc: 25.3, ft: 1.96, Ec: 35500 },
+            { grade: "C60", β1: 0.78, α1: 0.98, fck: 38.5, ftk: 2.85, fc: 27.5, ft: 2.04, Ec: 36000 },
+            { grade: "C65", β1: 0.77, α1: 0.97, fck: 41.5, ftk: 2.93, fc: 29.7, ft: 2.09, Ec: 36500 },
+            { grade: "C70", β1: 0.76, α1: 0.96, fck: 44.5, ftk: 2.99, fc: 31.8, ft: 2.14, Ec: 37000 },
+            { grade: "C75", β1: 0.75, α1: 0.95, fck: 47.4, ftk: 3.05, fc: 33.8, ft: 2.18, Ec: 37500 },
+            { grade: "C80", β1: 0.74, α1: 0.94, fck: 50.2, ftk: 3.11, fc: 35.9, ft: 2.22, Ec: 38000 },
+        ];
+        var { grade, α1, β1, fck, ftk, fc, ft, Ec } = specs_concrete[index_concrete];
+    </script>
+
+    <script>
+        // 钢筋相关参数
+        const rebar = document.getElementById('rebar');
+        const index_rebar = rebar.selectedIndex - 1;
+        var specs_rebar = [
+            { level: "HPB300", fyk: 300, fstk: 420, fy: 270, fyi: 270, Es: 210000, δgt: 10 },
+            { level: "HRB335", fyk: 335, fstk: 460, fy: 300, fyi: 300, Es: 200000, δgt: 7.5 },
+            { level: "HRB400", fyk: 400, fstk: 540, fy: 360, fyi: 360, Es: 200000, δgt: 7.5 },
+            { level: "HRBF400", fyk: 400, fstk: 540, fy: 360, fyi: 360, Es: 200000, δgt: 7.5 },
+            { level: "RRB400", fyk: 400, fstk: 540, fy: 360, fyi: 360, Es: 200000, δgt: 5.0 },
+            { level: "HRB500", fyk: 500, fstk: 630, fy: 435, fyi: 435, Es: 200000, δgt: 7.5 },
+            { level: "HRBF500", fyk: 500, fstk: 630, fy: 435, fyi: 435, Es: 200000, δgt: 7.5 },
+            { level: "中强度预应力钢丝-800", fpyk: 620, fptk: 800, fpy: 510, fpyi: 410, Es: 205000, δgt: 3.5 },
+            { level: "中强度预应力钢丝-970", fpyk: 780, fptk: 970, fpy: 650, fpyi: 410, Es: 205000, δgt: 3.5 },
+            { level: "中强度预应力钢丝-1270", fpyk: 980, fptk: 1270, fpy: 810, fpyi: 410, Es: 205000, δgt: 3.5 },
+            { level: "预应力螺纹钢筋-980", fpyk: 785, fptk: 980, fpy: 650, fpyi: 400, Es: 200000, δgt: 3.5 },
+            { level: "预应力螺纹钢筋-1080", fpyk: 930, fptk: 1080, fpy: 770, fpyi: 400, Es: 200000, δgt: 3.5 },
+            { level: "预应力螺纹钢筋-1230", fpyk: 1080, fptk: 1230, fpy: 900, fpyi: 400, Es: 200000, δgt: 3.5 },
+            { level: "消除应力钢丝-1470", fpyk: null, fptk: 1470, fpy: 1040, fpyi: 410, Es: 205000, δgt: 3.5 },
+            { level: "消除应力钢丝-1570", fpyk: null, fptk: 1570, fpy: 1110, fpyi: 410, Es: 205000, δgt: 3.5 },
+            { level: "消除应力钢丝-1860", fpyk: null, fptk: 1860, fpy: 1320, fpyi: 410, Es: 205000, δgt: 3.5 },
+            { level: "钢绞线-三股1570", fpyk: null, fptk: 1570, fpy: 1110, fpyi: 390, Es: 195000, δgt: 3.5 },
+            { level: "钢绞线-三股1860", fpyk: null, fptk: 1860, fpy: 1320, fpyi: 390, Es: 195000, δgt: 3.5 },
+            { level: "钢绞线-三股1960", fpyk: null, fptk: 1960, fpy: 1390, fpyi: 390, Es: 195000, δgt: 3.5 },
+            { level: "钢绞线-七股1720", fpyk: null, fptk: 1720, fpy: 1220, fpyi: 390, Es: 195000, δgt: 3.5 },
+            { level: "钢绞线-七股1860", fpyk: null, fptk: 1860, fpy: 1320, fpyi: 390, Es: 195000, δgt: 3.5 },
+            { level: "钢绞线-七股1960", fpyk: null, fptk: 1960, fpy: 1390, fpyi: 390, Es: 195000, δgt: 3.5 },
+        ];
+        var { level, fyk, fstk, fy, fyi, Es, δgt, fpyk, fptk, fpy, fpyi } = specs_rebar[index_rebar];
+    </script>
+</form>

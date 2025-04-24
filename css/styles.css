@@ -1,0 +1,261 @@
+:root {
+    --main-bg-color: #f3f3f3;
+    --head-bg-color: #1e90ff;
+    --input-bg-color: #ffffff;
+    --main-text-color: 000000;
+    --secondary-text-color: #bebebe;
+    --component-color: #1e90ff;
+    --accent-color: #ff6348;
+}
+.darkmode {
+    --main-bg-color: #212121;
+    --head-bg-color: #181818;
+    --input-bg-color: #f3f3f3;
+    --main-text-color: #a4a4a4;
+    --secondary-text-color: #bebebe;
+    --component-color: #1e90ff;
+    --accent-color: #ff6348;
+}
+.darkmode #switch {
+    display: block;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 14px;
+    display: flex;
+    overflow: hidden;
+}
+.menu {
+    width: 50px;
+    height: 100vh;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    & .menu-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+    }
+    .menu-item img {
+        width: 26px;
+    }
+    .menu-item:nth-last-child(2) {
+        margin-top: auto;
+    }
+}
+.nav {
+    min-width: 150px;
+    /* height: 100vh; */
+    border-right: 1px solid #ccc;
+    & .search {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .search input {
+        width: 90%;
+        height: 30px;
+        padding: 0 0 0 30px;
+        background-image: url(../png/搜索.png);
+        background-size: 18px;
+        background-position: 5px 5px;
+        background-repeat: no-repeat;
+    }
+    ul {
+        list-style: none;
+        & li {
+            padding: 5px 10px;
+            cursor: pointer;
+            & a {
+                color: #000;
+                text-decoration: none;
+                transition: background-color 0.3s;
+            }
+        }
+        li:hover {
+            background-color: var(--component-color)
+        }
+    }
+}
+.main {
+    flex: 1;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 40px 1fr;
+    grid-template-areas:
+        "header header header"
+        "formContainer picts output";
+    & #header {
+        grid-area: header;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 20px;
+        border-bottom: 1px solid #ccc;
+        & .header-item {
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .header-item img {
+            width: 24px;
+            height: 24px;
+        }
+        #run {
+            flex: 1;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        #run span {
+            display: inline-block;
+            padding-left: 100%;
+            will-change: transform;
+            animation: runer 10s linear infinite;
+        }
+    }
+    #formContainer {
+        grid-area: formContainer;
+        padding: 10px;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    #picts {
+        grid-area: picts;
+        border-right: 1px solid #ccc;
+        padding: 10px;
+        align-content: center;
+        & .picture img {
+            height: 200px;
+        }
+    }
+    #output {
+        grid-area: output;
+        padding: 10px;
+        overflow: auto;
+    }
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+    color: #000;
+    & thead {
+        background-color: var(--component-color);
+        height: 30px;
+    }
+    tbody {
+        background-color: var(--input-bg-color);
+    }
+    th {
+        padding: 5px;
+        text-align: center;
+        color: var(--main-text-color);
+        font-weight: bold;
+    }
+    tr {
+        transition: background-color 0.3s;
+    }
+    td {
+        padding: 5px;
+        text-align: center;
+        border: 1px solid #000;
+    }
+}
+form {
+    height: 100vh;
+    padding: 5px;
+    & .form-group {
+        width: 100%;
+        min-width: 300px;
+        padding: 5px;
+    }
+    label {
+        display: block;
+        padding-bottom: 5px;
+        &.checkbox {
+            display: inline-block;
+        }
+    }
+    input {
+        min-width: 200px;
+        width: 60%;
+        height: 28px;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--input-bg-color);
+    }
+    select {
+        min-width: 200px;
+        width: 60%;
+        height: 28px;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--input-bg-color);
+        appearance: none;
+        background-image: url("../svg/下箭头-方_down-square.svg");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+    }
+    button {
+        min-width: 200px;
+        width: 60%;
+        height: 36px;
+        padding: 5px 10px;
+        margin: 20px 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--component-color);
+        cursor: pointer;
+    }
+    input[type="checkbox"], input[type="radio"] {
+        min-width: 20px;
+        width: 14px;
+        height: 14px;
+        border: 1px solid #ccc;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--input-bg-color);
+    }
+    /* input[type="checkbox"]:checked,
+    input[type="radio"]:checked {
+        background-color: var(--component-color);
+    } */
+    input:focus,
+    select:focus,
+    button:focus {
+        border-color: var(--component-color);
+        outline: none;
+    }
+    button:hover,
+    button:active {
+        background-color: #2d98da;
+    }
+    h1 {
+        text-align: center;
+    }
+}
+@keyframes runer {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

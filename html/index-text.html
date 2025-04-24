@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>F-APP</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <script type="text/javascript" src="../js/formMenuClick.js" defer></script>
+        <script type="text/javascript" src="../js/getFormData.js" defer></script>
+        <script type="text/javascript" src="../js/saveFormData.js" defer></script>
+        <script type="text/javascript" src="../js/loadFormData.js" defer></script>
+        <script type="text/javascript" src="../js/postFormData.js" defer></script>
+        <!-- <script type="text/javascript" src="../js/partner.js" defer></script> -->
+        <!-- <script type="text/javascript" src="../js/displayTime.js" defer></script> -->
+        <!-- <script type="text/javascript" src="../js/delete.js" defer></script> -->
+        <script type="text/javascript" src="../calculations/calcA1.js" defer></script>
+        <script type="text/javascript" src="../calculations/calcA2.js" defer></script>
+        <script type="text/javascript" src="../calculations/calcA3.js" defer></script>
+        <script type="text/javascript" src="../calculations/calcA4.js" defer></script>
+        <script type="text/javascript" src="../calculations/calcA5.js" defer></script>
+        <script type="text/javascript" src="../calculations/calcA8.js" defer></script>
+        <script type="text/javascript" src="../calculations/calcB1.js" defer></script>
+        <script type="text/javascript" src="../calculations/calcB3.js" defer></script>
+        <script type="text/javascript" src="../calculations/calcB5.js" defer></script>
+        <script type="text/javascript" src="../calculations/calcB6.js" defer></script>
+        <script type="text/javascript" src="../calculations/calcDs.js" defer></script>
+        <script type="text/javascript" src="../calculations/calcE1.js" defer></script>
+        <script type="text/javascript" src="../calculations/calcE2.js" defer></script>
+        <script type="text/javascript" src="../calculations/calcE3.js" defer></script>
+        <script type="text/javascript" src="../calculations/calcE4.js" defer></script>
+    </head>
+
+    <body>
+        <div class="menu">
+            <div class="menu-item">
+                <img src="../png/应用.png" alt="">
+            </div>
+            <div class="menu-item">
+                <img src="../png/订阅.png" alt="">
+            </div>
+            <div class="menu-item">
+                <img src="../png/公告.png" alt="">
+            </div>
+            <div class="menu-item" id="switch">
+                <img src="../png/月亮.png" alt="">
+            </div>
+            <div class="menu-item" id="setting">
+                <img src="../png/设置.png" alt="">
+            </div>
+        </div>
+        <div class="nav">
+            <div class="search">
+                <input type="text" id="search" name="search" placeholder="搜索" />
+            </div>
+            <ul class="nav-links">
+                <li class="hidden" data-form="formA1"><a href="#">钢管支撑结构设计</a></li>
+                <li class="hidden" data-form="formA2"><a href="#">钢围檩结构设计</a></li>
+                <li class="hidden" data-form="formA3"><a href="#">砼冠梁受弯承载力</a></li>
+                <li class="hidden" data-form="formA4"><a href="#">桩抗弯承载力计算</a></li>
+                <li class="hidden" data-form="formA5"><a href="#">桩抗剪承载力计算</a></li>
+                <!-- <li class="hidden" data-form="formA6"><a href="#">桩抗拔承载力计算</a></li> -->
+                <!-- <li class="hidden" data-form="formA7"><a href="#">缀板式格构柱计算</a></li> -->
+                <li class="hidden" data-form="formA8"><a href="#">混凝土预埋件计算</a></li>
+                <!-- <li class="hidden" data-form="formB1"><a href="#">明挖箱型框架计算</a></li> -->
+                <!-- <li class="hidden" data-form="formB2"><a href="#">明挖结构抗浮计算</a></li> -->
+                <li class="hidden" data-form="formB3"><a href="#">砼矩形框架柱计算</a></li>
+                <!-- <li class="hidden" data-form="formB4"><a href="#">临轨墙疲劳验算</a></li> -->
+                <li class="hidden" data-form="formB5"><a href="#">轴心受拉裂缝验算</a></li>
+                <li class="hidden" data-form="formB6"><a href="#">偏心受拉裂缝验算</a></li>
+                <!-- <li class="hidden" data-form="formC1"><a href="#">盾构管片工程量</a></li> -->
+                <li class="hidden" data-form="formD1"><a href="#">超前深孔注浆加固</a></li>
+                <li class="hidden" data-form="formD2"><a href="#">盾构小导管注浆加固</a></li>
+                <li class="hidden" data-form="formD3"><a href="#">地面袖阀管注浆加固</a></li>
+                <li class="hidden" data-form="formD4"><a href="#">高压旋喷桩加固</a></li>
+                <li class="hidden" data-form="formD5"><a href="#">多排旋喷桩加固</a></li>
+                <li class="hidden" data-form="formE1"><a href="#">矩形正截面受弯承载力计算</a></li>
+                <li class="hidden" data-form="formE2"><a href="#">钢管混凝土柱承载力计算</a></li>
+                <li class="hidden" data-form="formE3"><a href="#">环形牛腿承载力计算</a></li>
+                <li class="hidden" data-form="formE4"><a href="#">连接件承载力计算</a></li>
+                <!-- <li class="hidden" data-form="formE5"><a href="#">地基承载力计算</a></li> -->
+                <!-- <li class="hidden" data-form="formE6"><a href="#">刚度/截面转换</a></li> -->
+                <!-- <li class="hidden" data-form="formE7"><a href="#">坑外管井降水计算</a></li> -->
+            </ul>
+
+
+        </div>
+        <div class="main">
+            <div id="header">
+                <div class="header-item" id="run">
+                    <span>您好，这里是F-APP的主页，欢迎您参观、使用、反馈，我们将竭诚为您提供优质的服务。</span>
+                </div>
+                <div class="header-item" id="time"></div>
+                <div class="header-item" id="partner">
+                    <img src="../png/人员.png" alt="">
+                </div>
+                <div class="header-item" id="download">
+                    <a href="../down/down.html" target="_blank">
+                        <img src="../png/下载.png" alt="">
+                    </a>
+                </div>
+                <div class="header-item" id="delete">
+                    <img src="../png/删除.png" alt="">
+                </div>
+            </div>
+            <div id="formContainer"></div>
+            <div id="output"></div>
+        </div>
+
+
+    </body>
+
+
+</html>
